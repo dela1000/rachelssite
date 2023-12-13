@@ -72,7 +72,7 @@ const ImageCarousel = ({ images, onClose }: ImageCarouselProps) => {
       <div className="relative mx-4 my-4 flex flex-col items-center overflow-hidden">
         <div className="flex flex-col items-center w-full h-full">
           <div className="mx-14 my-2 shadow-lg">
-            <div className="flex justify-center">
+            <div className="flex justify-center bg-black bg-opacity-60">
               <img
                 key={nextIndex}
                 src={images[currentIndex].image}
