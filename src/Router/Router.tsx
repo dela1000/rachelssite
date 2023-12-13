@@ -1,6 +1,6 @@
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import Home from 'src/components/Home';
-import Portfolio from 'src/components/portfolio';
+import Portfolio from 'src/components/Portfolio/Portfolio';
 import Header from 'src/components/Header';
 
 export default function App() {
