@@ -11,6 +11,8 @@ const ImageCarousel = ({ images, onClose }: ImageCarouselProps) => {
   const [currentIndex, setCurrentIndex] = useState(0);
   const [nextIndex, setNextIndex] = useState(0);
   const [isImageLoading, setIsImageLoading] = useState(false);
+  const [extraVerticalSpace, setExtraVerticalSpace] = useState(50);
+  const margin = 12;
 
   const changeImage = (newIndex: number) => {
     setIsImageLoading(true);
@@ -51,8 +53,19 @@ const ImageCarousel = ({ images, onClose }: ImageCarouselProps) => {
     };
   }, [currentIndex, images.length]);
 
-  const extraVerticalSpace = 50;
-  const margin = 12;
+  const updateExtraVerticalSpace = () => {
+    const newExtraVerticalSpace = window.innerWidth < 1280 ? 150 : 50;
+    setExtraVerticalSpace(newExtraVerticalSpace);
+  };
+
+  useEffect(() => {
+    updateExtraVerticalSpace();
+    window.addEventListener('resize', updateExtraVerticalSpace);
+
+    return () => {
+      window.removeEventListener('resize', updateExtraVerticalSpace);
+    };
+  }, []);
 
   return (
     <div className="font-sans fixed inset-0 bg-black bg-opacity-50 flex justify-center items-center z-50">
