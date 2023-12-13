@@ -15,23 +15,23 @@ const Header = () => {
           ☰
         </div>
 
-        <div className={`text-xl font-light ${isNavExpanded ? 'flex' : 'hidden'}`}>
-          <div
-            className="fixed inset-0 bg-gray-200 z-50 flex flex-col items-center justify-center space-y-6 xl:hidden text-2xl text-gray-700"
-            onClick={() => setIsNavExpanded(false)}
-          >
-            <Link to="/" onClick={() => setIsNavExpanded(false)} className="hover:text-gray-500">
-              Home
-            </Link>
-            <Link to="/portfolio" onClick={() => setIsNavExpanded(false)} className="hover:text-gray-500">
-              Portfolio
-            </Link>
-            <div className="hover:text-gray-500">
-              <Contact text="Contact" />
+        {isNavExpanded && (
+          <div className="fixed inset-0 z-40 xl:hidden flex items-center justify-center">
+            <div className="absolute inset-0 bg-gray-100 bg-opacity-80" />
+            <div className="relative z-50 flex flex-col items-center justify-center space-y-6 text-2xl text-gray-700">
+              <Link to="/" onClick={() => setIsNavExpanded(false)} className="hover:text-gray-500">
+                Home
+              </Link>
+              <Link to="/portfolio" onClick={() => setIsNavExpanded(false)} className="hover:text-gray-500">
+                Portfolio
+              </Link>
+              <div className="hover:text-gray-500">
+                <Contact text="Contact" />
+              </div>
             </div>
           </div>
-        </div>
-        {/* Horizontal menu for non-mobile */}
+        )}
+
         <div className="hidden xl:flex space-x-4 text-2xl text-gray-700 px-3 py-2">
           <Link to="/" className="hover:text-gray-500">
             Home
