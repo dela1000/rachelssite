@@ -13,7 +13,4 @@ export default defineConfig({
       src: '/src',
     },
   },
-  build: {
-    outDir: './build',
-  },
 });
