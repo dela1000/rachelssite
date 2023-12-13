@@ -68,7 +68,7 @@ const ImageCarousel = ({ images, onClose }: ImageCarouselProps) => {
   }, []);
 
   return (
-    <div className="font-sans fixed inset-0 bg-black bg-opacity-50 flex justify-center items-center z-50">
+    <div className="font-sans fixed inset-0 bg-black bg-opacity-60 flex justify-center items-center z-50">
       <div className="relative mx-4 my-4 flex flex-col items-center overflow-hidden">
         <div className="flex flex-col items-center w-full h-full">
           <div className="mx-14 my-2 shadow-lg">
