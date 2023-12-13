@@ -7,7 +7,7 @@ const Header = () => {
 
   return (
     <div className="sticky top-0 bg-white z-50">
-      <nav className="flex items-center justify-between px-5 py-8">
+      <nav className="flex items-center justify-between xl:px-5 xl:py-8 px-4 py-4">
         <Link to="/" className="text-4xl font-light hover:text-gray-500 font-ysabeau">
           Rachel Whitener
         </Link>
