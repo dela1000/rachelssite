@@ -72,7 +72,7 @@ const ImageCarousel = ({ images, onClose }: ImageCarouselProps) => {
                 onLoad={() => setIsImageLoading(false)}
               />
             </div>
-            <p className="font-garamond w-full mt-2 md:p-2 p-4 bg-white text-center">{images[currentIndex].title}</p>
+            <p className="font-garamond w-full mt-2 xl:p-2 p-4 bg-white text-center">{images[currentIndex].title}</p>
           </div>
         </div>
 

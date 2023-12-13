@@ -21,12 +21,12 @@ const Portfolio = () => {
       {carouselOpen && <ImageCarousel images={selectedImages} onClose={handleCloseCarousel} />}
 
       {portfolioItems.map((item, index) => (
-        <div key={index} className="group relative m-3 md:w-1/2 lg:w-1/3" onClick={() => handleItemClick(item.carouselImages)}>
-          <div className="md:flex md:h-screen">
+        <div key={index} className="group relative m-3 xl:w-1/2 lg:w-1/3" onClick={() => handleItemClick(item.carouselImages)}>
+          <div className="xl:flex xl:h-screen">
             <img src={item.imageSrc} alt={item.altText} className="object-cover drop-shadow-md" />
           </div>
           <div className="absolute inset-0 flex items-center justify-center bg-black bg-opacity-0 group-hover:bg-opacity-50 transition">
-            <p className="text-white md:text-black text-4xl font-bold text-center group-hover:text-white drop-shadow-md transition">{item.text}</p>
+            <p className="text-white xl:text-black text-4xl font-bold text-center group-hover:text-white drop-shadow-md transition">{item.text}</p>
           </div>
         </div>
       ))}

@@ -11,13 +11,13 @@ const Header = () => {
         <Link to="/" className="text-4xl font-light hover:text-gray-500 font-ysabeau">
           Rachel Whitener
         </Link>
-        <div className="text-xl md:hidden" onClick={() => setIsNavExpanded(!isNavExpanded)}>
+        <div className="text-xl xl:hidden" onClick={() => setIsNavExpanded(!isNavExpanded)}>
           ☰
         </div>
 
         <div className={`text-xl font-light ${isNavExpanded ? 'flex' : 'hidden'}`}>
           <div
-            className="fixed inset-0 bg-gray-200 z-50 flex flex-col items-center justify-center space-y-6 md:hidden text-2xl text-gray-700"
+            className="fixed inset-0 bg-gray-200 z-50 flex flex-col items-center justify-center space-y-6 xl:hidden text-2xl text-gray-700"
             onClick={() => setIsNavExpanded(false)}
           >
             <Link to="/" onClick={() => setIsNavExpanded(false)} className="hover:text-gray-500">
@@ -32,7 +32,7 @@ const Header = () => {
           </div>
         </div>
         {/* Horizontal menu for non-mobile */}
-        <div className="hidden md:flex space-x-4 text-2xl text-gray-700 px-3 py-2">
+        <div className="hidden xl:flex space-x-4 text-2xl text-gray-700 px-3 py-2">
           <Link to="/" className="hover:text-gray-500">
             Home
           </Link>

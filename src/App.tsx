@@ -2,7 +2,7 @@ import Router from 'src/Router';
 
 const App = () => {
   return (
-    <div className="md:px-10 font-garamond">
+    <div className="xl:px-10 font-garamond">
       <Router />
     </div>
   );
