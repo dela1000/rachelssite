@@ -1,7 +1,7 @@
 import beach from 'src/assets/portfolio/beach.jpg';
 import plants from 'src/assets/portfolio/plants.jpg';
-import snow from 'src/assets/portfolio/snow.jpg';
-import tree from 'src/assets/portfolio/tree.jpg';
+// import snow from 'src/assets/portfolio/snow.jpg';
+// import tree from 'src/assets/portfolio/tree.jpg';
 
 //Web Copy
 import crSusCerWC from 'src/assets/portfolio/examples/webcopy/CleanRobotics-SustainabilityCertificationsWebCopy.png';
@@ -17,7 +17,7 @@ import crPortAuthCaSt from 'src/assets/portfolio/examples/shortform/CleanRobotic
 import crPITAirDepPresReNewswire from 'src/assets/portfolio/examples/shortform/CleanRoboticsPITAirportDeploymentPressReleasePRNewswire.png';
 
 //Long Form
-import crWasAdMagArt from 'src/assets/portfolio/examples/longform/CleanRobotics-WasteAdvantageMagazineArticle2023.pdf';
+// import crWasAdMagArt from 'src/assets/portfolio/examples/longform/CleanRobotics-WasteAdvantageMagazineArticle2023.pdf';
 
 export type CarouselImage = {
   image: string;
