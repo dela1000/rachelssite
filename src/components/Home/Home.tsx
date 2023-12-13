@@ -12,7 +12,7 @@ const Home = () => {
       </div>
       <div className="flex-grow flex flex-col justify-center items-center md:p-24 p-7">
         <div className="font-light w-full md:w-auto">
-          <p className="text-3xl md:text-4xl text-red-700 font-light">
+          <p className="text-3xl md:text-4xl text-amber-900 font-light">
             I am a writer and storyteller. I'm interested in the why behind businesses. Narratives fascinate me - we are our stories, after all!
           </p>
           <p className="text-xl md:text-2xl md:mt-10 mt-5">

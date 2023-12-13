@@ -7,6 +7,7 @@ export default {
     extend: {
       fontFamily: {
         garamond: ['EB Garamond', ...defaultTheme.fontFamily.serif],
+        ysabeau: ['Ysabeau SC', ...defaultTheme.fontFamily.serif],
       },
     },
   },
