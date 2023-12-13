@@ -1,9 +1,10 @@
 import { ChevronLeftIcon, ChevronRightIcon, XMarkIcon } from '@heroicons/react/20/solid';
 
 import { useState, useEffect } from 'react';
+import { CarouselImage } from 'src/components/Portfolio/PortfolioImages';
 
 type ImageCarouselProps = {
-  images: string[];
+  images: CarouselImage[];
   onClose: () => void;
 };
 
@@ -32,6 +33,8 @@ const ImageCarousel = ({ images, onClose }: ImageCarouselProps) => {
       goToPrevious();
     } else if (event.key === 'ArrowRight') {
       goToNext();
+    } else if (event.key === 'Escape') {
+      onClose();
     }
   };
 
@@ -42,18 +45,30 @@ const ImageCarousel = ({ images, onClose }: ImageCarouselProps) => {
       window.removeEventListener('keydown', handleKeyDown);
     };
   }, [currentIndex, images.length]);
+  const extraVerticalSpace = 50;
+  const margin = 12;
 
   return (
     <div className="font-sans fixed inset-0 bg-black bg-opacity-50 flex justify-center items-center z-50">
-      <div className="relative max-w-3xl max-h-full mx-4 p-2 bg-white shadow-lg flex justify-center items-center">
-        <img
-          src={images[currentIndex]}
-          alt={`Slide ${currentIndex + 1}`}
-          className={`max-w-full max-h-full transition-opacity duration-200 ${isVisible ? 'opacity-100' : 'opacity-0'}`}
-        />
+      <div className="relative mx-4 my-4 shadow-lg flex flex-col items-center overflow-hidden">
+        <div className="flex flex-col items-center w-full h-full">
+          <div className="mx-14 my-2">
+            <img
+              src={images[currentIndex].image}
+              alt={`Slide ${currentIndex + 1}`}
+              className={`transition-opacity duration-200 ${isVisible ? 'opacity-100' : 'opacity-0'}`}
+              style={{
+                maxHeight: `calc(100vh - ${extraVerticalSpace}px - ${margin * 2}px)`,
+                maxWidth: `calc(100vw - ${margin * 2}px)`,
+              }}
+            />
+            <p className="font-garamond w-full mt-2 md:p-2 p-4 bg-white text-center">{images[currentIndex].title}</p>
+          </div>
+        </div>
+
         <button
           onClick={goToPrevious}
-          className="absolute left-4 top-1/2 transform -translate-y-1/2 z-10 bg-gray-700 opacity-70 text-white w-8 h-8 flex items-center justify-center rounded-full focus:outline-none hover:bg-gray-500 transition duration-300"
+          className="absolute left-3 top-1/2 transform -translate-y-1/2 z-10 bg-gray-700 opacity-70 text-white w-8 h-8 flex items-center justify-center rounded-full focus:outline-none hover:bg-gray-500 transition duration-300"
         >
           <ChevronLeftIcon />
         </button>
@@ -66,7 +81,7 @@ const ImageCarousel = ({ images, onClose }: ImageCarouselProps) => {
 
         <button
           onClick={onClose}
-          className="absolute top-4 right-4 z-10 bg-red-400 opacity-70 text-white w-7 h-7 flex items-center justify-center rounded-full focus:outline-none hover:bg-red-500 transition duration-300 text-sm"
+          className="absolute top-3 right-4 z-10 bg-red-400 opacity-70 text-white w-7 h-7 flex items-center justify-center rounded-full focus:outline-none hover:bg-red-500 transition duration-300 text-sm"
         >
           <XMarkIcon />
         </button>

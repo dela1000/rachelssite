@@ -4,7 +4,7 @@ import Contact from 'src/components/Contact';
 
 const Home = () => {
   return (
-    <div className="md:flex p-4 items-center justify-center">
+    <div className="md:flex px-4 pb-14 items-center justify-center">
       <div className="flex flex-col items-center justify-center">
         <div className="md:flex md:min-h-screen md:h-screen">
           <img className="object-cover drop-shadow-md" src={rachelPhoto} alt="Rachel" />
@@ -23,9 +23,11 @@ const Home = () => {
             I write for various industries - retail, tech, climate, leadership - and am skilled in SEO content development, web and ad copywriting,
             email marketing, and social media marketing.
           </p>
-          <button className="text-xl md:text-2xl md:mt-10 mt-5 outline  outline-offset-4 outline-gray-400 p-2">
-            <Contact text="Get in touch" />
-          </button>
+          <div className="flex md:justify-start justify-center">
+            <button className="text-xl md:text-2xl md:mt-10 mt-5 outline  outline-offset-4 outline-gray-400 p-2">
+              <Contact text="Get in touch" />
+            </button>
+          </div>
         </div>
       </div>
     </div>
