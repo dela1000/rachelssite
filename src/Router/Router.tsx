@@ -12,7 +12,7 @@ export default function App() {
         <Route path="/" element={<Home />} />
         <Route path="/portfolio" element={<Portfolio />} />
       </Routes>
-      <div className="flex justify-end pb-2">{year} - Rachel Whitener. All rights reserved</div>
+      <div className="flex justify-end pb-2 mr-4">{year} - Rachel Whitener. All rights reserved</div>
     </Router>
   );
 }

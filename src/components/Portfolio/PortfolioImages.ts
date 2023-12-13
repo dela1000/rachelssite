@@ -1,6 +1,6 @@
 import beach from 'src/assets/portfolio/beach.jpg';
 import plants from 'src/assets/portfolio/plants.jpg';
-// import snow from 'src/assets/portfolio/snow.jpg';
+import snow from 'src/assets/portfolio/snow.jpg';
 // import tree from 'src/assets/portfolio/tree.jpg';
 
 //Web Copy
@@ -17,7 +17,12 @@ import crPortAuthCaSt from 'src/assets/portfolio/examples/shortform/CleanRobotic
 import crPITAirDepPresReNewswire from 'src/assets/portfolio/examples/shortform/CleanRoboticsPITAirportDeploymentPressReleasePRNewswire.png';
 
 //Long Form
-// import crWasAdMagArt from 'src/assets/portfolio/examples/longform/CleanRobotics-WasteAdvantageMagazineArticle2023.pdf';
+import crArtWasManMag from 'src/assets/portfolio/examples/longform/CleanRoboticsArticle-WasteManagementMagazine.png';
+import crArtWasManMag2 from 'src/assets/portfolio/examples/longform/CleanRoboticsArticle-WasteManagementMagazine2.png';
+import crArtWasManMag3 from 'src/assets/portfolio/examples/longform/CleanRoboticsArticle-WasteManagementMagazine3.png';
+import seoBlogPost from 'src/assets/portfolio/examples/longform/SEOBlogPost.png';
+import seoBlogPost2 from 'src/assets/portfolio/examples/longform/SEOBlogPost2.png';
+import seoBlogPost3 from 'src/assets/portfolio/examples/longform/SEOBlogPost3.png';
 
 export type CarouselImage = {
   image: string;
@@ -55,18 +60,19 @@ export const portfolioItems: PortfolioItem[] = [
       { image: crPITAirDepPresReNewswire, title: 'CleanRobotics PIT Airport Deployment Press Release PR Newswire' },
     ],
   },
-  // {
-  //   imageSrc: snow,
-  //   altText: 'LONG FORM CONTENT',
-  //   text: 'LONG FORM CONTENT',
-  //   carouselImages: [
-  //     { image: crWasAdMagArt, title: 'CleanRobotics - Waste Advantage Magazine Article 2023' },
-  //     { image: 'https://placekitten.com/1520/1520', title: 'kitten 1' },
-  //     { image: 'https://placekitten.com/1720/1520', title: 'kitten 1' },
-  //     { image: 'https://placekitten.com/1820/1620', title: 'kitten 1' },
-  //     { image: 'https://placekitten.com/1420/1620', title: 'kitten 1' },
-  //   ],
-  // },
+  {
+    imageSrc: snow,
+    altText: 'LONG FORM CONTENT',
+    text: 'LONG FORM CONTENT',
+    carouselImages: [
+      { image: crArtWasManMag, title: 'CleanRobotics Article - Waste Management Magazine' },
+      { image: crArtWasManMag2, title: 'CleanRobotics Article - Waste Management Magazine 2' },
+      { image: crArtWasManMag3, title: 'CleanRobotics Article - Waste Management Magazine 3' },
+      { image: seoBlogPost, title: 'SEO Blog Post' },
+      { image: seoBlogPost2, title: 'SEO Blog Post 2' },
+      { image: seoBlogPost3, title: 'SEO Blog Post 3' },
+    ],
+  },
   // {
   //   imageSrc: tree,
   //   altText: 'AD COPY',
