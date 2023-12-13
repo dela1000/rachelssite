@@ -4,7 +4,7 @@ import Contact from 'src/components/Contact';
 
 const Home = () => {
   return (
-    <div className="md:flex px-4 pb-14 xl:items-center justify-center">
+    <div className="lg:flex px-4 pb-14 xl:items-center justify-center">
       <div className="flex flex-col items-center xl:justify-center pt-9">
         <div className="xl:flex xl:min-h-screen xl:h-screen">
           <img className="object-cover drop-shadow-md" src={rachelPhoto} alt="Rachel" />

@@ -88,26 +88,24 @@ const ImageCarousel = ({ images, onClose }: ImageCarouselProps) => {
             <p className="font-garamond w-full mt-2 xl:p-2 p-4 bg-white text-center">{images[currentIndex].title}</p>
           </div>
         </div>
+        <div className="flex items-center justify-center rounded-full focus:outline-none opacity-70 z-10 text-white">
+          <button
+            onClick={goToPrevious}
+            className="absolute left-3 top-1/2 transform -translate-y-1/2 bg-gray-700 w-8 h-8 rounded-full hover:bg-gray-500"
+          >
+            <ChevronLeftIcon />
+          </button>
+          <button
+            onClick={goToNext}
+            className="absolute right-3 top-1/2 transform -translate-y-1/2 bg-gray-700 w-8 h-8 rounded-full hover:bg-gray-500"
+          >
+            <ChevronRightIcon />
+          </button>
 
-        <button
-          onClick={goToPrevious}
-          className="absolute left-3 top-1/2 transform -translate-y-1/2 z-10 bg-gray-700 opacity-70 text-white w-8 h-8 flex items-center justify-center rounded-full focus:outline-none hover:bg-gray-500 transition duration-300"
-        >
-          <ChevronLeftIcon />
-        </button>
-        <button
-          onClick={goToNext}
-          className="absolute right-4 top-1/2 transform -translate-y-1/2 z-10 bg-gray-700 opacity-70 text-white w-8 h-8 flex items-center justify-center rounded-full focus:outline-none hover:bg-gray-500 transition duration-300"
-        >
-          <ChevronRightIcon />
-        </button>
-
-        <button
-          onClick={onClose}
-          className="absolute top-3 right-4 z-10 bg-red-400 opacity-70 text-white w-7 h-7 flex items-center justify-center rounded-full focus:outline-none hover:bg-red-500 transition duration-300 text-sm"
-        >
-          <XMarkIcon />
-        </button>
+          <button onClick={onClose} className="absolute top-3 right-4 bg-red-400 w-7 h-7 rounded-full hover:bg-red-500">
+            <XMarkIcon />
+          </button>
+        </div>
       </div>
     </div>
   );
