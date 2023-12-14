@@ -67,13 +67,13 @@ const Resume = () => {
         <div className="text-3xl mb-7 font-bold">Experience</div>
         {resume.map((job: Job) => {
           return (
-            <div>
+            <div key={job.dates}>
               <h2 className="text-xl font-bold mt-4">{job.title}</h2>
               <p className="text-gray-600 text-lg my-2">
                 {job.company.length ? `${job.company} |` : ''} {job.dates}
               </p>
-              {job.tasks.map((task: Task) => {
-                return <div>• {task}</div>;
+              {job.tasks.map((task: Task, index: number) => {
+                return <div key={index}>• {task}</div>;
               })}
             </div>
           );

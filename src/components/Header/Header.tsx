@@ -26,6 +26,9 @@ const Header = () => {
               <Link to="/portfolio" onClick={() => setIsNavExpanded(false)} className="hover:text-gray-500">
                 Portfolio
               </Link>
+              <Link to="/resume" onClick={() => setIsNavExpanded(false)} className="hover:text-gray-500">
+                Resume
+              </Link>
               <div className="hover:text-gray-500">
                 <Contact text="Contact" />
               </div>
