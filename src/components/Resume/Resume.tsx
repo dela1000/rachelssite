@@ -77,7 +77,7 @@ const Resume = () => {
 
         <div className="flex justify-center">
           <button className="text-xl xl:text-2xl xl:mt-10 mt-5 outline  outline-offset-4 outline-gray-400 p-2">
-            <a target="_blank" href="/public/RWhitenerResume2024.pdf">
+            <a target="_blank" href="/public/RWhitenerResume2024.pdf" rel="noreferrer">
               <div className="send-button font-weight-light pointer">View full Resume</div>
             </a>
           </button>
