@@ -26,9 +26,11 @@ const Portfolio = () => {
             <img src={item.imageSrc} alt={item.altText} className="h-full w-full object-cover xl:w-auto drop-shadow-md" />
           </div>
           <div className="absolute inset-0 flex items-center justify-center bg-black bg-opacity-0 group-hover:bg-opacity-50 transition">
-            <p className="text-white xl:text-black text-3xl lg:text-4xl font-bold text-center group-hover:text-white drop-shadow-md transition">
-              {item.text}
-            </p>
+            <div className="p-4">
+              <p className="text-white xl:text-black text-3xl lg:text-4xl font-bold text-center group-hover:text-white drop-shadow-md transition">
+                {item.text}
+              </p>
+            </div>
           </div>
         </div>
       ))}
