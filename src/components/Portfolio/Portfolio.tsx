@@ -27,7 +27,7 @@ const Portfolio = () => {
           </div>
           <div className="absolute inset-0 flex items-center justify-center bg-black bg-opacity-0 group-hover:bg-opacity-50 transition">
             <div className="p-4">
-              <p className="text-white xl:text-black text-3xl lg:text-4xl font-bold text-center group-hover:text-white drop-shadow-md transition">
+              <p className="text-white xl:text-black text-3xl lg:text-4xl font-bold text-center group-hover:text-white group-hover:drop-shadow-none xl:drop-shadow-[1px_1px_rgba(236,236,236,1)] drop-shadow-[1px_1px_rgba(0,0,0,1)] transition">
                 {item.text}
               </p>
             </div>
