@@ -1,3 +1,5 @@
+import { Link } from 'react-router-dom';
+
 type Task = string;
 
 type Job = {
@@ -56,6 +58,12 @@ const resume: Job[] = [
   },
 ];
 
+const resumeLocation = '/public/RWhitenerResume2024.pdf';
+
+const openInNewTab = (url) => {
+  window.open(url, '_blank', 'noopener,noreferrer');
+};
+
 const Resume = () => {
   return (
     <div className="bg-white p-6 flex justify-center">
@@ -77,9 +85,12 @@ const Resume = () => {
 
         <div className="flex justify-center">
           <button className="text-xl xl:text-2xl xl:mt-10 mt-5 outline  outline-offset-4 outline-gray-400 p-2">
-            <a target="_blank" href="/public/RWhitenerResume2024.pdf" rel="noopener noreferrer">
-              <div className="send-button font-weight-light pointer">View full Resume</div>
-            </a>
+            <Link to={resumeLocation} download="RachelWhitenerResume.pdf" target="_blank" rel="noopener noreferrer">
+              View full Resume
+            </Link>
+          </button>
+          <button className="text-xl xl:text-2xl xl:mt-10 mt-5 outline  outline-offset-4 outline-gray-400 p-2">
+            <button onClick={() => openInNewTab(resumeLocation)}>View full Resume</button>
           </button>
         </div>
       </div>
