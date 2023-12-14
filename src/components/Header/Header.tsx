@@ -39,6 +39,9 @@ const Header = () => {
           <Link to="/portfolio" className="hover:text-gray-500">
             Portfolio
           </Link>
+          <Link to="/resume" className="hover:text-gray-500">
+            Resume
+          </Link>
           <div className="hover:text-gray-500">
             <Contact text="Contact" />
           </div>
