@@ -60,7 +60,7 @@ const resume: Job[] = [
 
 const resumeLocation = '/public/RWhitenerResume2024.pdf';
 
-const openInNewTab = (url) => {
+const openInNewTab = (url: string) => {
   window.open(url, '_blank', 'noopener,noreferrer');
 };
 
