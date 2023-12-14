@@ -89,9 +89,6 @@ const Resume = () => {
               View full Resume
             </Link>
           </button>
-          <button className="text-xl xl:text-2xl xl:mt-10 mt-5 outline  outline-offset-4 outline-gray-400 p-2">
-            <button onClick={() => openInNewTab(resumeLocation)}>View full Resume</button>
-          </button>
         </div>
       </div>
     </div>
