@@ -1,18 +1,19 @@
 import { useState } from 'react';
 import { Link } from 'react-router-dom';
 import Contact from 'src/components/Contact';
+import { Bars4Icon } from '@heroicons/react/20/solid';
 
 const Header = () => {
   const [isNavExpanded, setIsNavExpanded] = useState(false);
 
   return (
     <div className="sticky top-0 bg-white z-50">
-      <nav className="flex items-center justify-between xl:px-5 xl:py-8 px-4 py-4">
+      <nav className="flex items-center justify-between xl:py-8 px-5 py-4">
         <Link to="/" className="text-4xl font-light hover:text-gray-500 font-ysabeau">
           Rachel Whitener
         </Link>
         <div className="text-xl xl:hidden" onClick={() => setIsNavExpanded(!isNavExpanded)}>
-          ☰
+          <Bars4Icon className="h-6 w-6" />
         </div>
 
         {isNavExpanded && (
