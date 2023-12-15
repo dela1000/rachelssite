@@ -1,39 +1,41 @@
 import { useState } from 'react';
 import ImageCarousel from 'src/components/ImageCarousel';
-import { CarouselImage, portfolioItems } from './PortfolioImages';
+import { CarouselImage, CarouselVideo, portfolioImages, portfolioVideoItems } from './PortfolioData';
+
+import PortfolioImageContainer from './PortfolioImageContainer';
+import VideoCarousel from '../VideoCarousel';
 
 const Portfolio = () => {
-  const [selectedImages, setSelectedImages] = useState<CarouselImage[]>([]);
-  const [carouselOpen, setCarouselOpen] = useState(false);
+  const [selectedItems, setSelectedItems] = useState<CarouselImage[] | CarouselVideo[]>([]);
+  const [imageCarouselOpen, setImageCarouselOpen] = useState<boolean>(false);
+  const [videoCarouselOpen, setVideoCarouselOpen] = useState<boolean>(false);
 
-  const handleItemClick = (itemImages: CarouselImage[]) => {
-    setSelectedImages(itemImages);
-    setCarouselOpen(true);
+  const handleItemClick = (carouselItems: CarouselImage[] | CarouselVideo[], type: string) => {
+    setSelectedItems(carouselItems);
+    if (type === 'images') {
+      setImageCarouselOpen(true);
+      setVideoCarouselOpen(false);
+    } else {
+      setImageCarouselOpen(false);
+      setVideoCarouselOpen(true);
+    }
   };
 
-  const handleCloseCarousel = () => {
-    setCarouselOpen(false);
-    setSelectedImages([]);
+  const handleCloseCarousels = () => {
+    setImageCarouselOpen(false);
+    setVideoCarouselOpen(false);
+    setSelectedItems([]);
   };
 
   return (
     <div className="flex flex-wrap justify-center">
-      {carouselOpen && <ImageCarousel images={selectedImages} onClose={handleCloseCarousel} />}
+      {imageCarouselOpen && <ImageCarousel images={selectedItems} onClose={handleCloseCarousels} />}
+      {videoCarouselOpen && <VideoCarousel videos={selectedItems} onClose={handleCloseCarousels} />}
 
-      {portfolioItems.map((item) => (
-        <div key={item.text} className="group relative m-1 w-1/2 xl:w-1/3" onClick={() => handleItemClick(item.carouselImages)}>
-          <div className="flex aspect-square w-full justify-center overflow-hidden xl:h-screen">
-            <img src={item.imageSrc} alt={item.altText} className="h-full w-full object-cover xl:w-auto drop-shadow-md" />
-          </div>
-          <div className="absolute inset-0 flex items-center justify-center bg-black bg-opacity-0 group-hover:bg-opacity-50 transition">
-            <div className="p-4">
-              <p className="text-white xl:text-black text-3xl lg:text-4xl font-bold text-center group-hover:text-white group-hover:drop-shadow-none xl:drop-shadow-[1px_1px_rgba(236,236,236,1)] drop-shadow-[1px_1px_rgba(0,0,0,1)] transition">
-                {item.text}
-              </p>
-            </div>
-          </div>
-        </div>
+      {portfolioImages.map((item) => (
+        <PortfolioImageContainer key={item.text} item={item} type="images" onClick={handleItemClick} />
       ))}
+      <PortfolioImageContainer item={portfolioVideoItems} type="videos" onClick={handleItemClick} />
     </div>
   );
 };

@@ -9,6 +9,9 @@ export default {
         garamond: ['EB Garamond', ...defaultTheme.fontFamily.serif],
         ysabeau: ['Ysabeau SC', ...defaultTheme.fontFamily.serif],
       },
+      scale: {
+        102: '1.02',
+      },
     },
   },
   plugins: [],

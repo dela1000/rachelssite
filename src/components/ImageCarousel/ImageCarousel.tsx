@@ -1,9 +1,9 @@
 import { useState, useEffect } from 'react';
 import { ChevronLeftIcon, ChevronRightIcon, XMarkIcon } from '@heroicons/react/20/solid';
-import { CarouselImage } from 'src/components/Portfolio/PortfolioImages';
+import { CarouselImage, CarouselVideo } from 'src/components/Portfolio/PortfolioData';
 
 type ImageCarouselProps = {
-  images: CarouselImage[];
+  images: CarouselImage[] | CarouselVideo[];
   onClose: () => void;
 };
 
@@ -18,7 +18,7 @@ const ImageCarousel = ({ images, onClose }: ImageCarouselProps) => {
     setIsImageLoading(true);
     setNextIndex(newIndex);
     const image = new Image();
-    image.src = images[newIndex].image;
+    image.src = images[newIndex].item;
     image.onload = () => {
       setCurrentIndex(newIndex);
       setIsImageLoading(false);
@@ -75,7 +75,7 @@ const ImageCarousel = ({ images, onClose }: ImageCarouselProps) => {
             <div className="flex justify-center bg-black bg-opacity-60">
               <img
                 key={nextIndex}
-                src={images[currentIndex].image}
+                src={images[currentIndex].item}
                 alt={`Slide ${currentIndex + 1}`}
                 className={`transition-opacity duration-500 ease-in-out ${isImageLoading ? 'opacity-0' : 'opacity-100'}`}
                 style={{
