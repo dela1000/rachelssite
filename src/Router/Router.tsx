@@ -15,7 +15,7 @@ export default function App() {
         <Route path="/resume" element={<Resume />} />
         <Route path="*" element={<Navigate to="/" replace />} />
       </Routes>
-      <div className="flex justify-end pb-2 mr-4">{year} - Rachel Whitener. All rights reserved</div>
+      <div className="lg:text-sm text-xs flex justify-end pb-2 mr-4">{year} - Rachel Whitener. All rights reserved</div>
     </Router>
   );
 }
