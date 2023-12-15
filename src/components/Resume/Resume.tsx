@@ -16,8 +16,8 @@ const resume: Job[] = [
     dates: 'March 2020 - Present',
     tasks: [
       'Provide social media management and copywriting in various capacities, including for solopreneur and enterprise clients.',
-      'Create social media content including posts, graphics, audiograms, reels, and blog.',
-      'Develop copy for Google ads, landing pages, and emails.',
+      'Create social media content including posts, graphics, audiograms, reels. Write and publish SEO-driven blog content.',
+      'Develop copy for Google ads, LinkedIn ads, landing pages, and email sequences.',
     ],
   },
   {
@@ -28,8 +28,9 @@ const resume: Job[] = [
     tasks: [
       'Management of all outbound marketing content and copy, including social media, email newsletters, and blog.',
       'Copywriting for social media posts, case studies, white papers, articles, and landing pages.',
+      'Conceptualization of video content for social media reels and YouTube; created storyboards for videos and provided direction to the graphic designer.',
       'Support for organizational priorities, e.g., investor deck slides, sales collateral, grant and award applications.',
-      'Press release creation, outreach, and community management.',
+      'Press release creation, media outreach, and community management.',
     ],
   },
   {

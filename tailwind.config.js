@@ -10,7 +10,7 @@ export default {
         ysabeau: ['Ysabeau SC', ...defaultTheme.fontFamily.serif],
       },
       scale: {
-        102: '1.02',
+        101: '1.01',
       },
     },
   },

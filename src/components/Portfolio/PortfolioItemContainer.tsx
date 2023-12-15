@@ -1,15 +1,15 @@
 import { PortfolioItem } from './PortfolioData';
 
-type PortfolioImageContainerType = {
+type PortfolioItemContainerType = {
   item: PortfolioItem;
   onClick: (item: PortfolioItem) => void;
 };
 
-const PortfolioImageContainer = ({ item, onClick }: PortfolioImageContainerType) => {
+const PortfolioItemContainer = ({ item, onClick }: PortfolioItemContainerType) => {
   return (
     <div
       key={item.text}
-      className="group relative m-2 w-1/2 xl:w-1/3 hover:scale-102 transition-transform"
+      className="group relative m-2 w-1/2 xl:w-1/3 hover:scale-101 transition-transform"
       onClick={() => {
         onClick(item);
       }}
@@ -28,4 +28,4 @@ const PortfolioImageContainer = ({ item, onClick }: PortfolioImageContainerType)
   );
 };
 
-export default PortfolioImageContainer;
+export default PortfolioItemContainer;

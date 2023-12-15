@@ -21,7 +21,7 @@ const Portfolio = () => {
   };
 
   return (
-    <div className="flex flex-wrap justify-center">
+    <div className="flex flex-wrap justify-center pt-3">
       {carouselOpen && <ItemCarousel items={selectedItems} variant={typeSelected} onClose={handleCloseCarousels} />}
 
       {portfolioItems.map((item) => (
