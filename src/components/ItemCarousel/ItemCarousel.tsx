@@ -85,8 +85,8 @@ const ItemCarousel = ({ items, variant, onClose }: ItemCarouselProps) => {
 
   return (
     <div className="font-sans fixed inset-0 bg-black bg-opacity-60 flex justify-center items-center z-50">
-      <div className="relative mx-4 my-4 flex flex-col items-center overflow-hidden">
-        <div className="flex flex-col items-center w-full h-full">
+      <div className="relative mx-4 my-4 flex flex-col items-center overflow-hidden w-full" onClick={onClose}>
+        <div className="flex flex-col items-center h-full" onClick={(e) => e.stopPropagation()}>
           <div className="mx-14 my-2 shadow-lg">
             <div className="flex justify-center bg-black bg-opacity-60">
               {variant === 'images' ? (
@@ -113,20 +113,23 @@ const ItemCarousel = ({ items, variant, onClose }: ItemCarouselProps) => {
             <p className="font-garamond w-full mt-2 xl:p-2 p-4 bg-white text-center">{items[currentIndex].title}</p>
           </div>
         </div>
-        <div className="flex items-center justify-center rounded-full focus:outline-none opacity-70 z-10 text-white">
+        <div
+          className="flex items-center justify-center rounded-full focus:outline-none opacity-80 z-10 text-white"
+          onClick={(e) => e.stopPropagation()}
+        >
           <button
             onClick={goToPrevious}
-            className="absolute left-3 top-1/2 transform -translate-y-1/2 bg-gray-700 w-8 h-8 rounded-full hover:bg-gray-500"
+            className="absolute left-0 top-1/2 transform -translate-y-1/2 bg-gray-700 xl:w-11 xl:h-11 w-8 h-8 rounded-full hover:bg-gray-500"
           >
             <ChevronLeftIcon />
           </button>
           <button
             onClick={goToNext}
-            className="absolute right-3 top-1/2 transform -translate-y-1/2 bg-gray-700 w-8 h-8 rounded-full hover:bg-gray-500"
+            className="absolute right-0 top-1/2 transform -translate-y-1/2 bg-gray-700 xl:w-11 xl:h-11 w-8 h-8 rounded-full hover:bg-gray-500"
           >
             <ChevronRightIcon />
           </button>
-          <button onClick={onClose} className="absolute top-3 right-4 bg-red-400 w-7 h-7 rounded-full hover:bg-red-500">
+          <button onClick={onClose} className="fixed top-4 right-4 bg-red-400 xl:w-10 xl:h-10 w-7 h-7 rounded-full hover:bg-red-500">
             <XMarkIcon />
           </button>
         </div>
