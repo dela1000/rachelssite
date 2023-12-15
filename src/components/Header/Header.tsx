@@ -8,7 +8,7 @@ const Header = () => {
 
   return (
     <div className="sticky top-0 bg-white z-50">
-      <nav className="flex items-center justify-between xl:py-8 px-5 py-4">
+      <nav className="flex items-center justify-between xl:py-8 px-3.5 py-4">
         <Link to="/" className="md:text-4xl text-2xl font-light hover:text-gray-500 font-ysabeau mr-2">
           Rachel Whitener
         </Link>
@@ -36,7 +36,7 @@ const Header = () => {
           </div>
         )}
 
-        <div className="hidden xl:flex space-x-4 text-2xl text-gray-700 px-3 py-2">
+        <div className="hidden xl:flex space-x-4 text-2xl text-gray-700 py-2">
           <Link to="/" className="hover:text-gray-500">
             Home
           </Link>
