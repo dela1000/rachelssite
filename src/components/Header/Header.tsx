@@ -9,7 +9,7 @@ const Header = () => {
   return (
     <div className="sticky top-0 bg-white z-50">
       <nav className="flex items-center justify-between xl:py-8 px-5 py-4">
-        <Link to="/" className="text-4xl font-light hover:text-gray-500 font-ysabeau">
+        <Link to="/" className="md:text-4xl text-2xl font-light hover:text-gray-500 font-ysabeau mr-2">
           Rachel Whitener
         </Link>
         <div className="text-xl xl:hidden" onClick={() => setIsNavExpanded(!isNavExpanded)}>

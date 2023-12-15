@@ -17,7 +17,7 @@ const PortfolioItemContainer = ({ item, onClick }: PortfolioItemContainerType) =
   return (
     <div
       key={item.text}
-      className="group relative m-2 w-1/2 xl:w-1/3 hover:scale-101 transition-transform min-h-96 min-w-96"
+      className="group relative m-2 w-1/2 xl:w-1/3 hover:scale-101 transition-transform xl:min-h-96 xl:min-w-96"
       onClick={() => {
         onClick(item);
       }}
@@ -36,7 +36,7 @@ const PortfolioItemContainer = ({ item, onClick }: PortfolioItemContainerType) =
       {!showLoading && (
         <div className="absolute inset-0 flex items-center justify-center bg-black group-hover:bg-opacity-10 xl:bg-opacity-50 bg-opacity-10 transition">
           <div className="p-4">
-            <p className="text-white drop-shadow-[1px_1px_rgba(0,0,0,1)] text-3xl lg:text-4xl group-hover:drop-shadow-[1px_1px_rgba(0,0,0,1)] font-bold text-center transition">
+            <p className="text-white drop-shadow-[1px_1px_rgba(0,0,0,1)] text-lg sm:text-3xl lg:text-4xl group-hover:drop-shadow-[1px_1px_rgba(0,0,0,1)] font-bold text-center transition">
               {item.text}
             </p>
           </div>

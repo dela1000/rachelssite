@@ -12,9 +12,9 @@ const Home = () => {
   };
 
   return (
-    <div className="lg:flex px-4 pb-14 xl:items-center justify-center">
+    <div className="lg:flex px-4 pb-3 xl:items-center justify-center">
       <div className="flex flex-col items-center xl:justify-center pt-9">
-        <div className="xl:flex xl:min-h-screen xl:h-screen relative min-h-96 min-w-96">
+        <div className="xl:flex xl:min-h-screen xl:h-screen relative xl:min-h-96 xl:min-w-96">
           {showLoading && <Loading />}
           <img
             className="object-cover drop-shadow-md"
