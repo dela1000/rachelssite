@@ -1,7 +1,7 @@
-import beach from 'src/assets/portfolio/beach.jpg';
-import plants from 'src/assets/portfolio/plants.jpg';
-import snow from 'src/assets/portfolio/snow.jpg';
-import tree from 'src/assets/portfolio/tree.jpg';
+import beach from 'src/assets/portfolio/beach.jpeg';
+import plants from 'src/assets/portfolio/flowers.jpeg';
+import snow from 'src/assets/portfolio/snow.jpeg';
+import tree from 'src/assets/portfolio/tree.jpeg';
 
 //Web Copy
 import crSusCerWC from 'src/assets/portfolio/examples/webcopy/CleanRobotics-SustainabilityCertificationsWebCopy.png';
