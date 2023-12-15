@@ -12,6 +12,9 @@ export default {
       scale: {
         101: '1.01',
       },
+      minHeight: (theme) => ({
+        ...theme('spacing'),
+      }),
     },
   },
   plugins: [],

@@ -99,7 +99,7 @@ const ItemCarousel = ({ items, variant, onClose }: ItemCarouselProps) => {
           <div className="mx-14 my-2 shadow-lg">
             <div className="flex justify-center bg-black bg-opacity-60">
               {variant === 'images' ? (
-                <div className="relative">
+                <div className="relative min-h-96 min-w-96">
                   {showLoading && <Loading />}
                   <img
                     key={nextIndex}
@@ -115,7 +115,7 @@ const ItemCarousel = ({ items, variant, onClose }: ItemCarouselProps) => {
                   />
                 </div>
               ) : (
-                <div className="relative">
+                <div className="relative min-h-96 min-w-96">
                   {showLoading && <Loading />}
                   <iframe
                     width={videoDimensions.width}
