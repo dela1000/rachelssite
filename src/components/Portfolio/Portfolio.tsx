@@ -1,6 +1,6 @@
 import { useState } from 'react';
 import ItemCarousel from 'src/components/ItemCarousel';
-import { PortfolioObj, portfolioItems, CarouselItem, Variant } from './PortfolioData';
+import { PortfolioItem, portfolioItems, CarouselItem, Variant } from './PortfolioData';
 
 import PortfolioItemContainer from './PortfolioItemContainer';
 
@@ -9,7 +9,7 @@ const Portfolio = () => {
   const [carouselOpen, setCarouselOpen] = useState<boolean>(false);
   const [typeSelected, setSelectedType] = useState<Variant>('images');
 
-  const handleItemClick = (item: PortfolioObj) => {
+  const handleItemClick = (item: PortfolioItem) => {
     setSelectedItems(item.carouselItems);
     setSelectedType(item.variant);
     setCarouselOpen(true);

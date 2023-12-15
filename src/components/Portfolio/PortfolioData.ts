@@ -31,14 +31,14 @@ export type CarouselItem = {
   title: string;
 };
 
-export type PortfolioObj = {
+export type PortfolioItem = {
   imageSrc: string;
   text: string;
   variant: Variant;
   carouselItems: CarouselItem[];
 };
 
-export const portfolioItems: PortfolioObj[] = [
+export const portfolioItems: PortfolioItem[] = [
   {
     imageSrc: beach,
     text: 'WEB COPY',
@@ -81,11 +81,11 @@ export const portfolioItems: PortfolioObj[] = [
     variant: 'videos',
     carouselItems: [
       {
-        item: 'https://www.youtube.com/embed/mJeiYM4HrOE?si=kclrTEDRApEo8ub_',
+        item: 'mJeiYM4HrOE?si=kclrTEDRApEo8ub_',
         title: 'TrashBot Takes Flight: Improving Waste Management at Airports',
       },
       {
-        item: 'https://www.youtube.com/embed/xiY5W8JIsKo?si=QJbNds2GChJYo-uS',
+        item: 'xiY5W8JIsKo?si=QJbNds2GChJYo-uS',
         title: "Let's Face It: Recycling Is Confusing, But TrashBot Is Here to Help",
       },
     ],

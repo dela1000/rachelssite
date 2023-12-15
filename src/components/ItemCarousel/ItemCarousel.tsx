@@ -103,7 +103,7 @@ const ItemCarousel = ({ items, variant, onClose }: ItemCarouselProps) => {
                 <iframe
                   width={videoDimensions.width}
                   height={videoDimensions.height}
-                  src={items[currentIndex].item}
+                  src={`https://www.youtube.com/embed/${items[currentIndex].item}`}
                   title={items[currentIndex].title}
                   allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
                   allowFullScreen

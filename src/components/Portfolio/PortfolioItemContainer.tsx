@@ -1,8 +1,8 @@
-import { PortfolioObj } from './PortfolioData';
+import { PortfolioItem } from './PortfolioData';
 
 type PortfolioImageContainerType = {
-  item: PortfolioObj;
-  onClick: (item: PortfolioObj) => void;
+  item: PortfolioItem;
+  onClick: (item: PortfolioItem) => void;
 };
 
 const PortfolioImageContainer = ({ item, onClick }: PortfolioImageContainerType) => {
