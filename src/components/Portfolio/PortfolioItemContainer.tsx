@@ -1,26 +1,17 @@
-import { PortfolioImage, CarouselImage, PortfolioVideo, CarouselVideo } from './PortfolioData';
+import { PortfolioObj } from './PortfolioData';
 
 type PortfolioImageContainerType = {
-  item: PortfolioImage | PortfolioVideo;
-  type: 'images' | 'videos';
-  onClick: (images: CarouselImage[] | CarouselVideo[], type: string) => void;
+  item: PortfolioObj;
+  onClick: (item: PortfolioObj) => void;
 };
 
-const PortfolioImageContainer = ({ item, type, onClick }: PortfolioImageContainerType) => {
-  function isPortfolioImage(item: PortfolioImage | PortfolioVideo): item is PortfolioImage {
-    return (item as PortfolioImage).carouselImages !== undefined;
-  }
-
+const PortfolioImageContainer = ({ item, onClick }: PortfolioImageContainerType) => {
   return (
     <div
       key={item.text}
       className="group relative m-2 w-1/2 xl:w-1/3 hover:scale-102 transition-transform"
       onClick={() => {
-        if (type === 'images' && isPortfolioImage(item)) {
-          onClick(item.carouselImages, type);
-        } else if (type === 'videos' && !isPortfolioImage(item)) {
-          onClick(item.carouselVideos, type);
-        }
+        onClick(item);
       }}
     >
       <div className="flex aspect-square w-full justify-center overflow-hidden xl:h-screen">

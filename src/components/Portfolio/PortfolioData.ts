@@ -24,34 +24,24 @@ import seoBlogPost from 'src/assets/portfolio/examples/longform/SEOBlogPost.png'
 import seoBlogPost2 from 'src/assets/portfolio/examples/longform/SEOBlogPost2.png';
 import seoBlogPost3 from 'src/assets/portfolio/examples/longform/SEOBlogPost3.png';
 
-export type PortfolioItem = {
+export type CarouselItem = {
+  item: string;
+  title: string;
+};
+
+export type PortfolioObj = {
   imageSrc: string;
   text: string;
+  type: string;
+  carouselItems: CarouselItem[];
 };
 
-export type CarouselImage = {
-  item: string;
-  title: string;
-};
-
-export type CarouselVideo = {
-  item: string;
-  title: string;
-};
-
-export type PortfolioImage = PortfolioItem & {
-  carouselImages: CarouselImage[];
-};
-
-export type PortfolioVideo = PortfolioItem & {
-  carouselVideos: CarouselVideo[];
-};
-
-export const portfolioImages: PortfolioImage[] = [
+export const portfolioItems: PortfolioObj[] = [
   {
     imageSrc: beach,
     text: 'WEB COPY',
-    carouselImages: [
+    type: 'images',
+    carouselItems: [
       { item: crSusCerWC, title: 'CleanRobotics - Sustainability Certifications Web Copy' },
       { item: crTraFedLandPag, title: 'CleanRobotics - TrashBot for Fed Facilities Landing Page' },
       { item: crTraAirLandPag, title: 'CleanRobotics - TrashBot for Airports Landing Page' },
@@ -62,7 +52,8 @@ export const portfolioImages: PortfolioImage[] = [
   {
     imageSrc: plants,
     text: 'SHORT FORM CONTENT',
-    carouselImages: [
+    type: 'images',
+    carouselItems: [
       { item: crWhiPapProPost, title: 'CR White Paper Promo Post' },
       { item: crSocMedPost, title: 'CR Social Media Post' },
       { item: crPortAuthCaSt, title: 'CleanRobotics Port Authority Case Study' },
@@ -72,7 +63,8 @@ export const portfolioImages: PortfolioImage[] = [
   {
     imageSrc: snow,
     text: 'LONG FORM CONTENT',
-    carouselImages: [
+    type: 'images',
+    carouselItems: [
       { item: crArtWasManMag, title: 'CleanRobotics Article - Waste Management Magazine' },
       { item: crArtWasManMag2, title: 'CleanRobotics Article - Waste Management Magazine 2' },
       { item: crArtWasManMag3, title: 'CleanRobotics Article - Waste Management Magazine 3' },
@@ -81,16 +73,19 @@ export const portfolioImages: PortfolioImage[] = [
       { item: seoBlogPost3, title: 'SEO Blog Post 3' },
     ],
   },
+  {
+    imageSrc: tree,
+    text: 'VIDEOS',
+    type: 'videos',
+    carouselItems: [
+      {
+        item: 'https://www.youtube.com/embed/mJeiYM4HrOE?si=kclrTEDRApEo8ub_',
+        title: 'TrashBot Takes Flight: Improving Waste Management at Airports',
+      },
+      {
+        item: 'https://www.youtube.com/embed/xiY5W8JIsKo?si=QJbNds2GChJYo-uS',
+        title: "Let's Face It: Recycling Is Confusing, But TrashBot Is Here to Help",
+      },
+    ],
+  },
 ];
-
-export const portfolioVideoItems: PortfolioVideo = {
-  imageSrc: tree,
-  text: 'VIDEOS',
-  carouselVideos: [
-    { item: 'https://www.youtube.com/embed/mJeiYM4HrOE?si=kclrTEDRApEo8ub_', title: 'TrashBot Takes Flight: Improving Waste Management at Airports' },
-    {
-      item: 'https://www.youtube.com/embed/xiY5W8JIsKo?si=QJbNds2GChJYo-uS',
-      title: "Let's Face It: Recycling Is Confusing, But TrashBot Is Here to Help",
-    },
-  ],
-};
