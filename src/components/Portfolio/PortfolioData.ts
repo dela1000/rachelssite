@@ -1,5 +1,5 @@
 import beach from 'src/assets/portfolio/beach.jpeg';
-import plants from 'src/assets/portfolio/flowers.jpeg';
+import flowers from 'src/assets/portfolio/flowers.jpeg';
 import snow from 'src/assets/portfolio/snow.jpeg';
 import tree from 'src/assets/portfolio/tree.jpeg';
 
@@ -52,7 +52,7 @@ export const portfolioItems: PortfolioItem[] = [
     ],
   },
   {
-    imageSrc: plants,
+    imageSrc: flowers,
     text: 'SHORT FORM CONTENT',
     variant: 'images',
     carouselItems: [
