@@ -1,10 +1,10 @@
 import { useState, useEffect } from 'react';
 import { ChevronLeftIcon, ChevronRightIcon, XMarkIcon } from '@heroicons/react/20/solid';
-import { CarouselItem } from 'src/components/Portfolio/PortfolioData';
+import { CarouselItem, Variant } from 'src/components/Portfolio/PortfolioData';
 
 type ItemCarouselProps = {
   items: CarouselItem[];
-  type: string;
+  variant: Variant;
   onClose: () => void;
 };
 
@@ -13,7 +13,7 @@ type VideoDimensions = {
   height: number;
 };
 
-const ItemCarousel = ({ items, type, onClose }: ItemCarouselProps) => {
+const ItemCarousel = ({ items, variant, onClose }: ItemCarouselProps) => {
   const [currentIndex, setCurrentIndex] = useState<number>(0);
   const [nextIndex, setNextIndex] = useState<number>(0);
   const [extraVerticalSpace, setExtraVerticalSpace] = useState<number>(50);
@@ -22,7 +22,7 @@ const ItemCarousel = ({ items, type, onClose }: ItemCarouselProps) => {
 
   const changeItem = (newIndex: number) => {
     setNextIndex(newIndex);
-    if (type === 'images') {
+    if (variant === 'images') {
       const image = new Image();
       image.src = items[newIndex].item;
       image.onload = () => {
@@ -62,11 +62,11 @@ const ItemCarousel = ({ items, type, onClose }: ItemCarouselProps) => {
   }, [currentIndex, items.length]);
 
   const updateDimensions = () => {
-    if (type === 'images') {
-      const newExtraVerticalSpace = window.innerWidth < 1280 ? 150 : 50;
+    const screenWidth = window.innerWidth;
+    if (variant === 'images') {
+      const newExtraVerticalSpace = screenWidth < 1280 ? 150 : 50;
       setExtraVerticalSpace(newExtraVerticalSpace);
     } else {
-      const screenWidth = window.innerWidth;
       const videoWidth = screenWidth - (screenWidth < 1280 ? 100 : 500);
       const aspectRatio = 16 / 9;
       const videoHeight = videoWidth / aspectRatio;
@@ -89,7 +89,7 @@ const ItemCarousel = ({ items, type, onClose }: ItemCarouselProps) => {
         <div className="flex flex-col items-center w-full h-full">
           <div className="mx-14 my-2 shadow-lg">
             <div className="flex justify-center bg-black bg-opacity-60">
-              {type === 'images' ? (
+              {variant === 'images' ? (
                 <img
                   key={nextIndex}
                   src={items[currentIndex].item}

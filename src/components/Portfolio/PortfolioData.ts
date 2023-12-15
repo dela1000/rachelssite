@@ -24,6 +24,8 @@ import seoBlogPost from 'src/assets/portfolio/examples/longform/SEOBlogPost.png'
 import seoBlogPost2 from 'src/assets/portfolio/examples/longform/SEOBlogPost2.png';
 import seoBlogPost3 from 'src/assets/portfolio/examples/longform/SEOBlogPost3.png';
 
+export type Variant = 'images' | 'videos';
+
 export type CarouselItem = {
   item: string;
   title: string;
@@ -32,7 +34,7 @@ export type CarouselItem = {
 export type PortfolioObj = {
   imageSrc: string;
   text: string;
-  type: string;
+  variant: Variant;
   carouselItems: CarouselItem[];
 };
 
@@ -40,7 +42,7 @@ export const portfolioItems: PortfolioObj[] = [
   {
     imageSrc: beach,
     text: 'WEB COPY',
-    type: 'images',
+    variant: 'images',
     carouselItems: [
       { item: crSusCerWC, title: 'CleanRobotics - Sustainability Certifications Web Copy' },
       { item: crTraFedLandPag, title: 'CleanRobotics - TrashBot for Fed Facilities Landing Page' },
@@ -52,7 +54,7 @@ export const portfolioItems: PortfolioObj[] = [
   {
     imageSrc: plants,
     text: 'SHORT FORM CONTENT',
-    type: 'images',
+    variant: 'images',
     carouselItems: [
       { item: crWhiPapProPost, title: 'CR White Paper Promo Post' },
       { item: crSocMedPost, title: 'CR Social Media Post' },
@@ -63,7 +65,7 @@ export const portfolioItems: PortfolioObj[] = [
   {
     imageSrc: snow,
     text: 'LONG FORM CONTENT',
-    type: 'images',
+    variant: 'images',
     carouselItems: [
       { item: crArtWasManMag, title: 'CleanRobotics Article - Waste Management Magazine' },
       { item: crArtWasManMag2, title: 'CleanRobotics Article - Waste Management Magazine 2' },
@@ -76,7 +78,7 @@ export const portfolioItems: PortfolioObj[] = [
   {
     imageSrc: tree,
     text: 'VIDEOS',
-    type: 'videos',
+    variant: 'videos',
     carouselItems: [
       {
         item: 'https://www.youtube.com/embed/mJeiYM4HrOE?si=kclrTEDRApEo8ub_',
