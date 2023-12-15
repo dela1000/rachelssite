@@ -1,6 +1,7 @@
 import { useState, useEffect } from 'react';
 import { ChevronLeftIcon, ChevronRightIcon, XMarkIcon } from '@heroicons/react/20/solid';
 import { CarouselItem, Variant } from 'src/components/Portfolio/PortfolioData';
+import Loading from 'src/components/Loading/Loading';
 
 type ItemCarouselProps = {
   items: CarouselItem[];
@@ -18,6 +19,7 @@ const ItemCarousel = ({ items, variant, onClose }: ItemCarouselProps) => {
   const [nextIndex, setNextIndex] = useState<number>(0);
   const [extraVerticalSpace, setExtraVerticalSpace] = useState<number>(50);
   const [videoDimensions, setVideoDimensions] = useState<VideoDimensions>({ width: 0, height: 0 });
+  const [showLoading, setShowLoading] = useState<boolean>(true);
   const margin = 12;
 
   const changeItem = (newIndex: number) => {
@@ -46,10 +48,13 @@ const ItemCarousel = ({ items, variant, onClose }: ItemCarouselProps) => {
   const handleKeyDown = (event: KeyboardEvent) => {
     if (event.key === 'ArrowLeft') {
       goToPrevious();
+      setShowLoading(true);
     } else if (event.key === 'ArrowRight') {
       goToNext();
+      setShowLoading(true);
     } else if (event.key === 'Escape') {
       onClose();
+      setShowLoading(false);
     }
   };
 
@@ -83,6 +88,10 @@ const ItemCarousel = ({ items, variant, onClose }: ItemCarouselProps) => {
     };
   }, []);
 
+  const hideLoading = () => {
+    setShowLoading(false);
+  };
+
   return (
     <div className="font-sans fixed inset-0 bg-black bg-opacity-60 flex justify-center items-center z-50">
       <div className="relative mx-4 my-4 flex flex-col items-center overflow-hidden w-full" onClick={onClose}>
@@ -90,24 +99,36 @@ const ItemCarousel = ({ items, variant, onClose }: ItemCarouselProps) => {
           <div className="mx-14 my-2 shadow-lg">
             <div className="flex justify-center bg-black bg-opacity-60">
               {variant === 'images' ? (
-                <img
-                  key={nextIndex}
-                  src={items[currentIndex].item}
-                  alt={`Slide ${currentIndex + 1}`}
-                  style={{
-                    maxHeight: `calc(100vh - ${extraVerticalSpace}px - ${margin * 2}px)`,
-                    maxWidth: `calc(100vw - ${margin * 2}px)`,
-                  }}
-                />
+                <div className="relative">
+                  {showLoading && <Loading />}
+                  <img
+                    key={nextIndex}
+                    src={items[currentIndex].item}
+                    alt={`Slide ${currentIndex + 1}`}
+                    style={{
+                      maxHeight: `calc(100vh - ${extraVerticalSpace}px - ${margin * 2}px)`,
+                      maxWidth: `calc(100vw - ${margin * 2}px)`,
+                    }}
+                    onLoad={() => {
+                      hideLoading();
+                    }}
+                  />
+                </div>
               ) : (
-                <iframe
-                  width={videoDimensions.width}
-                  height={videoDimensions.height}
-                  src={`https://www.youtube.com/embed/${items[currentIndex].item}`}
-                  title={items[currentIndex].title}
-                  allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                  allowFullScreen
-                ></iframe>
+                <div className="relative">
+                  {showLoading && <Loading />}
+                  <iframe
+                    width={videoDimensions.width}
+                    height={videoDimensions.height}
+                    src={`https://www.youtube.com/embed/${items[currentIndex].item}`}
+                    title={items[currentIndex].title}
+                    allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                    allowFullScreen
+                    onLoad={() => {
+                      hideLoading();
+                    }}
+                  ></iframe>
+                </div>
               )}
             </div>
             <p className="font-garamond w-full mt-2 xl:p-2 p-4 bg-white text-center">{items[currentIndex].title}</p>
