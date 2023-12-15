@@ -131,7 +131,7 @@ const ItemCarousel = ({ items, variant, onClose }: ItemCarouselProps) => {
                 </div>
               )}
             </div>
-            <p className="font-garamond w-full mt-2 xl:p-2 p-4 bg-white text-center">{items[currentIndex].title}</p>
+            <p className="font-garamond w-full mt-2 xl:p-2 p-4 bg-white text-center text-gray-700">{items[currentIndex].title}</p>
           </div>
         </div>
         <div

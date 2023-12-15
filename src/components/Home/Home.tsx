@@ -31,19 +31,21 @@ const Home = () => {
           <p className="text-2xl xl:text-3xl text-amber-900 font-light">
             I am a writer and storyteller. I'm interested in the why behind businesses.
           </p>
-          <p className="text-lg xl:text-xl xl:mt-10 mt-5">
-            Narratives fascinate me - we are our stories, after all. I use storytelling to amplify a brand's influence. My background in PR has
-            equipped me with a passion for nurturing relationships and the expertise to develop high-quality yet relatable content that draws people
-            in.
-          </p>
-          <p className="text-lg xl:text-xl xl:mt-10 mt-5">
-            I write for various industries - tech, retail, climate, leadership - and am skilled in SEO content development, web and ad copywriting,
-            email marketing, and social media marketing.
-          </p>
-          <div className="flex xl:justify-start justify-center">
-            <button className="text-lg xl:text-xl xl:mt-10 mt-5 outline outline-offset-3 outline-gray-400 p-2">
-              <Contact text="Get in touch" />
-            </button>
+          <div className="text-lg xl:text-xl text-gray-700">
+            <p className="xl:mt-10 mt-5">
+              Narratives fascinate me - we are our stories, after all. I use storytelling to amplify a brand's influence. My background in PR has
+              equipped me with a passion for nurturing relationships and the expertise to develop high-quality yet relatable content that draws people
+              in.
+            </p>
+            <p className="xl:mt-10 mt-5">
+              I write for various industries - tech, retail, climate, leadership - and am skilled in SEO content development, web and ad copywriting,
+              email marketing, and social media marketing.
+            </p>
+            <div className="flex xl:justify-start justify-center xl:mt-10 mt-5">
+              <button className=" outline outline-offset-3 outline-amber-900 p-2">
+                <Contact text="Get in touch" />
+              </button>
+            </div>
           </div>
         </div>
       </div>

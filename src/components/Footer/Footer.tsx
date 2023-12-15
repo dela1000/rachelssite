@@ -10,7 +10,7 @@ const Footer = () => {
             <img src={linkedin} alt="linkedin" />
           </a>
         </div>
-        <div className="pb-1.5 lg:text-sm text-xs">{year} - Rachel Whitener. All rights reserved</div>
+        <div className="pb-1.5 lg:text-sm text-xs text-gray-700">{year} - Rachel Whitener. All rights reserved</div>
       </div>
     </footer>
   );

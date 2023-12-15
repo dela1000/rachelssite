@@ -70,7 +70,7 @@ const Resume = () => {
           return (
             <div key={job.dates}>
               <h2 className="text-xl font-bold mt-4">{job.title}</h2>
-              <p className="text-gray-600 text-lg my-2">
+              <p className="text-gray-700 text-lg my-2">
                 {job.company.length ? `${job.company} |` : ''} {job.dates}
               </p>
               {job.tasks.map((task: Task, index: number) => {
@@ -81,7 +81,7 @@ const Resume = () => {
         })}
 
         <div className="flex justify-center">
-          <button className="text-xl xl:text-2xl xl:mt-10 mt-5 outline  outline-offset-4 outline-gray-400 p-2">
+          <button className="text-xl xl:text-2xl xl:mt-10 mt-5 outline  outline-offset-4 outline-amber-900 p-2">
             <Link to={resumeLocation} download="RachelWhitenerResume.pdf" target="_blank" rel="noopener noreferrer">
               View full Resume
             </Link>
