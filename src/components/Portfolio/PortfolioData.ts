@@ -56,10 +56,10 @@ export const portfolioItems: PortfolioItem[] = [
     text: 'SHORT FORM CONTENT',
     variant: 'images',
     carouselItems: [
-      { item: crWhiPapProPost, title: 'CR White Paper Promo Post' },
-      { item: crSocMedPost, title: 'CR Social Media Post' },
-      { item: crPortAuthCaSt, title: 'CleanRobotics Port Authority Case Study' },
-      { item: crPITAirDepPresReNewswire, title: 'CleanRobotics PIT Airport Deployment Press Release PR Newswire' },
+      { item: crWhiPapProPost, title: 'ClearRobotics - White Paper Promo Post' },
+      { item: crSocMedPost, title: 'ClearRobotics - Social Media Post' },
+      { item: crPortAuthCaSt, title: 'CleanRobotics - Port Authority Case Study' },
+      { item: crPITAirDepPresReNewswire, title: 'CleanRobotics - PIT Airport Deployment Press Release PR Newswire' },
     ],
   },
   {

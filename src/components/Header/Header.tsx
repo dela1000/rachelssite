@@ -19,7 +19,7 @@ const Header = () => {
         {isNavExpanded && (
           <div className="fixed inset-0 z-40 xl:hidden flex items-center justify-center">
             <div className="absolute inset-0 bg-gray-100 bg-opacity-80" />
-            <div className="relative z-50 flex flex-col items-center justify-center space-y-6 text-2xl text-gray-700">
+            <div className="relative z-50 flex flex-col items-center justify-center space-y-6 text-xl text-gray-700">
               <Link to="/" onClick={() => setIsNavExpanded(false)} className="hover:text-amber-900">
                 Home
               </Link>
@@ -36,7 +36,7 @@ const Header = () => {
           </div>
         )}
 
-        <div className="hidden xl:flex space-x-4 text-2xl text-gray-700 py-2">
+        <div className="hidden xl:flex space-x-4 text-xl text-gray-700 py-2">
           <Link to="/" className="hover:text-amber-900">
             Home
           </Link>
