@@ -138,18 +138,22 @@ const ItemCarousel = ({ items, variant, onClose }: ItemCarouselProps) => {
           className="flex items-center justify-center rounded-full focus:outline-none opacity-80 z-10 text-white"
           onClick={(e) => e.stopPropagation()}
         >
-          <button
-            onClick={goToPrevious}
-            className="absolute left-0 top-1/2 transform -translate-y-1/2 bg-gray-700 xl:w-11 xl:h-11 w-8 h-8 rounded-full hover:bg-gray-500"
-          >
-            <ChevronLeftIcon />
-          </button>
-          <button
-            onClick={goToNext}
-            className="absolute right-0 top-1/2 transform -translate-y-1/2 bg-gray-700 xl:w-11 xl:h-11 w-8 h-8 rounded-full hover:bg-gray-500"
-          >
-            <ChevronRightIcon />
-          </button>
+          {items.length > 1 ? (
+            <button
+              onClick={goToPrevious}
+              className="absolute left-0 top-1/2 transform -translate-y-1/2 bg-gray-700 xl:w-11 xl:h-11 w-8 h-8 rounded-full hover:bg-gray-500"
+            >
+              <ChevronLeftIcon />
+            </button>
+          ) : null}
+          {items.length > 1 ? (
+            <button
+              onClick={goToNext}
+              className="absolute right-0 top-1/2 transform -translate-y-1/2 bg-gray-700 xl:w-11 xl:h-11 w-8 h-8 rounded-full hover:bg-gray-500"
+            >
+              <ChevronRightIcon />
+            </button>
+          ) : null}
           <button onClick={onClose} className="fixed top-4 right-4 bg-red-400 xl:w-10 xl:h-10 w-7 h-7 rounded-full hover:bg-red-500">
             <XMarkIcon />
           </button>

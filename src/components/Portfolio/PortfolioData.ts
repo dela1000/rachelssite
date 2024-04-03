@@ -67,7 +67,7 @@ export const portfolioItems: PortfolioItem[] = [
     text: 'EMAIL',
     variant: 'images',
     carouselItems: [
-      { item: gfBRUPPE1, title: 'Galactic Fed - BRU Post Purchase Email 1' },
+      { item: gfBRUPPE1, title: "Galactic Fed - Babies''R''Us Post Purchase Email" },
       { item: gfAkEB, title: 'Galactic Fed - Akadeum Email Blast' },
       { item: gfAkWe1, title: 'Galactic Fed - Akadeum Webinar Email 1' },
       { item: gfAkWe2, title: 'Galactic Fed - Akadeum Webinar Email 2' },
