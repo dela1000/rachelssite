@@ -17,7 +17,7 @@ const PortfolioItemContainer = ({ item, onClick }: PortfolioItemContainerType) =
   return (
     <div
       key={item.text}
-      className="group relative m-2 w-1/2 xl:w-1/3 hover:scale-101 transition-transform xl:min-h-96 xl:min-w-96"
+      className="group relative m-2 w-1/2 xl:w-1/4 hover:scale-101 transition-transform xl:min-h-96 xl:min-w-96"
       onClick={() => {
         onClick(item);
       }}

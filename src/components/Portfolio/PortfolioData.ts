@@ -25,6 +25,12 @@ import crArtWasManMag3 from 'src/assets/portfolio/examples/longform/CleanRobotic
 import seoBlogPost from 'src/assets/portfolio/examples/longform/SEOBlogPost.png';
 import seoBlogPost2 from 'src/assets/portfolio/examples/longform/SEOBlogPost2.png';
 import seoBlogPost3 from 'src/assets/portfolio/examples/longform/SEOBlogPost3.png';
+import cosmoLexBlogPost1 from 'src/assets/portfolio/examples/longform/cosmoLexBlopost1.png';
+import cosmoLexBlogPost2 from 'src/assets/portfolio/examples/longform/cosmoLexBlopost2.png';
+import cosmoLexBlogPost3 from 'src/assets/portfolio/examples/longform/cosmoLexBlopost3.png';
+import cosmoLexBlogPost4 from 'src/assets/portfolio/examples/longform/cosmoLexBlopost4.png';
+import docuXplorer1 from 'src/assets/portfolio/examples/longform/docuXplorer1.png';
+import docuXplorer2 from 'src/assets/portfolio/examples/longform/docuXplorer2.png';
 
 //Email
 import gfBRUPPE1 from 'src/assets/portfolio/examples/email/gf-BRUPostPurchase Email1.png';
@@ -101,6 +107,12 @@ export const portfolioItems: PortfolioItem[] = [
       { item: seoBlogPost, title: 'SEO Blog Post' },
       { item: seoBlogPost2, title: 'SEO Blog Post 2' },
       { item: seoBlogPost3, title: 'SEO Blog Post 3' },
+      { item: cosmoLexBlogPost1, title: 'CosmoLex Blog Post 1' },
+      { item: cosmoLexBlogPost2, title: 'CosmoLex Blog Post 2' },
+      { item: cosmoLexBlogPost3, title: 'CosmoLex Blog Post 3' },
+      { item: cosmoLexBlogPost4, title: 'CosmoLex Blog Post 4' },
+      { item: docuXplorer1, title: 'DocuXplorer Blog Post 1' },
+      { item: docuXplorer2, title: 'DocuXplorer Blog Post 2' },
     ],
   },
   {
